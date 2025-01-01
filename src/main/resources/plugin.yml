@@ -1,0 +1,4 @@
+name: NexoMechanicExample
+version: '0.1'
+main: com.nexomc.example_mechanic.NexoMechanicExample
+api-version: '1.21'
