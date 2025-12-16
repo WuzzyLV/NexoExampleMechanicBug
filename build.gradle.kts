@@ -1,5 +1,5 @@
 plugins {
-    kotlin("jvm") version "2.1.0"
+    id("java")
     id("com.github.johnrengelman.shadow") version "8.1.1"
 }
 
@@ -19,13 +19,13 @@ repositories {
 
 dependencies {
     compileOnly("io.papermc.paper:paper-api:1.21-R0.1-SNAPSHOT")
-    compileOnly("com.nexomc:nexo:0.7.0")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+    compileOnly("com.nexomc:nexo:1.16.1")
 }
 
 val targetJavaVersion = 21
-kotlin {
-    jvmToolchain(targetJavaVersion)
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
 }
 
 tasks.build {
